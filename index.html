@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+        }
+        body {
+            background: #bcb3cb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: small;
+        }
+        .container {
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-weight: bold;
+            color: rgb(25, 2, 59);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .textbox, .category-box {
+            margin-bottom: 20px;
+        }
+        .textbox label, .category-box label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        #start-btn {
+            background: #48107c;
+            color: #fff;
+            font-weight: 500;
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+        #start-btn:hover {
+            background: #360861;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trivia Quiz</h1>
+
+        <!-- Player 1 Name Input -->
+        <div class="textbox">
+            <label for="name1">Enter the Name of Player 1:</label>
+            <input type="text" id="name1" name="name1" placeholder="Player 1 Name">
+        </div>
+
+        <!-- Player 2 Name Input -->
+        <div class="textbox">
+            <label for="name2">Enter the Name of Player 2:</label>
+            <input type="text" id="name2" name="name2" placeholder="Player 2 Name">
+        </div>
+
+        <!-- Category Selection -->
+        <div class="category-box">
+            <label for="categories">Choose a category:</label>
+            <select id="categories" name="categories">
+                <option value="9">General Knowledge</option>
+                <option value="10">Books</option>
+                <option value="11">Film</option>
+                <option value="12">Music</option>
+                <option value="13">Musicals & Theatres</option>
+                <option value="14">Television</option>
+                <option value="15">Video Games</option>
+                <option value="16">Board Games</option>
+                <option value="17">Science & Nature</option>
+                <option value="18">Computers</option>
+                <option value="19">Mathematics</option>
+                <option value="20">Mythology</option>
+                <option value="21">Sports</option>
+                <option value="22">Geography</option>
+                <option value="23">History</option>
+                <option value="24">Politics</option>
+                <option value="25">Art</option>
+                <option value="26">Celebrities</option>
+                <option value="27">Animals</option>
+                <option value="28">Vehicles</option>
+                <option value="29">Comics</option>
+                <option value="30">Gadgets</option>
+                <option value="31">Japanese Anime & Manga</option>
+                <option value="32">Cartoon & Animations</option>
+            </select>
+        </div>
+
+        <!-- Start Quiz Button -->
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <script>
+        document.getElementById('start-btn').addEventListener('click', function() {
+            // Retrieve player names and category
+            var player1Name = document.getElementById('name1').value;
+            var player2Name = document.getElementById('name2').value;
+            var selectedCategory = document.getElementById('categories').value;
+
+            // Check if both players have entered their names
+            if (player1Name && player2Name && selectedCategory) {
+                // Store player names and category in localStorage
+                localStorage.setItem('player1', player1Name);
+                localStorage.setItem('player2', player2Name);
+                localStorage.setItem('selectedCategory', selectedCategory);
+
+                // Redirect to the quiz page
+                window.location.href = 'quiz.html';
+            } else {
+                alert('Please enter names for both players and select a category.');
+            }
+        });
+    </script>
+</body>
+</html>

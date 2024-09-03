@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #bcb3cb;
+}
+
+#scores {
+    background: #fff;
+    width: 90%;
+    max-width: 200px;
+    margin: 100px auto;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 18px;
+    color: rgb(7, 7, 7);
+    font-weight: 600;
+}
+
+.quiz {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.quiz h1 {
+    font-weight: 25px;
+    color: rgb(25, 2, 59);
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+
+.questions h2 {
+    font-size: 18px;
+    color: #504dff;
+    font-weight: 600;
+}
+
+#diff{
+    font-size: 12px;
+    color: #f475d9;
+    font-weight: 600;
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+#next-btn {
+    background: #48107c;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+#final-scores {
+    display: none;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#end-game, #start-again {
+    background-color: #6906da;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: none;
+}
+
+.correct {
+    background: #9aeabc;
+}
+
+.incorrect {
+    background: #ff9393;
+}
+
+

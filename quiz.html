@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia quiz app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="display: flex; justify-content: space-around;">
+    <div class="quiz">
+        <h1>Trivia Quiz</h1>
+        <div class="questions">
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <h2 id="question">Loading question...</h2>
+            <span id="diff">Difficulty</span>
+            </div>
+            <div class="answers">
+                <button class="btn">Option 1</button>
+                <button class="btn">Option 2</button>
+                <button class="btn">Option 3</button>
+                <button class="btn">Option 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+            <div id="final-scores"></div>
+        </div>
+    </div>
+    <div id="scores">
+        <h3 id="curr_score" style="padding-bottom: 20px; color: black;">Current Score</h3><hr>
+        <div id="player1Score" style="padding: 10px; font-size: 25px; ">Player 1: 0</div>
+        <div id="player2Score" style="padding: 10px; padding-top: 0px; font-size: 25px;">Player 2: 0</div>
+    </div>
+</div>
+    <div class="buttons">
+        <button id="end-game">End Game</button>
+        <button id="start-again">Continue in the same category</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
